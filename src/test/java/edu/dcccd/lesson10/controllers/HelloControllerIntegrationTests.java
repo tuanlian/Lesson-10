@@ -11,9 +11,11 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 @RunWith(SpringRunner.class)
 @WebMvcTest(HelloController.class)
+
 public class HelloControllerIntegrationTests {
     @Autowired
     private MockMvc mvc;
+
     @Test
     public void testHelloWithoutName() throws Exception {
         mvc.perform(get("/hello")
@@ -22,6 +24,7 @@ public class HelloControllerIntegrationTests {
                 .andExpect(view().name("hello"))
                 .andExpect(model().attribute("user", is("World")));
     }
+
     @Test
     public void testHelloWithName() throws Exception {
         mvc.perform(get("/hello")

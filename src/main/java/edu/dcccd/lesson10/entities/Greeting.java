@@ -1,24 +1,13 @@
 package edu.dcccd.lesson10.entities;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.Getter;
+import lombok.*;
 
 @Data
-@Getter
 @AllArgsConstructor
+@NoArgsConstructor
 public class Greeting {
-    public Greeting(String format) {
-
-    }
-
-    private String greeting() {
-        return "greeting";
-    }
-
-    public void getGreeting() {
-
-    }
+    @Getter
+    private String Greeting;
 }
 
 
